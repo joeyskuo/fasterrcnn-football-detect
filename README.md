@@ -19,7 +19,7 @@ Object detection model that identifies footballs and players in images using a f
 
 ## Dataset
 
-YOLO format — images in `images/`, labels in `labels/` as `.txt` files with normalized `class cx cy bw bh` per line. Split into `train/` and `valid/` directories.
+YOLO format: images in `images/`, labels in `labels/` as `.txt` files with normalized `class cx cy bw bh` per line. Split into `train/` and `valid/` directories.
 
 - Class 0 → football (mapped to label index 1)
 - Class 1 → player (mapped to label index 2)
@@ -43,8 +43,8 @@ Best checkpoint saved to `best.pth` based on highest `mAP@0.5` on the validation
 ## Validation Metrics
 
 Computed each epoch using `torchmetrics`:
-- `mAP@0.5` — IoU threshold 0.5
-- `mAP@0.5:0.95` — COCO standard, averaged across IoU thresholds 0.5–0.95
+- `mAP@0.5` - IoU threshold 0.5
+- `mAP@0.5:0.95` - COCO standard, averaged across IoU thresholds 0.5–0.95
 
 ## Requirements
 
